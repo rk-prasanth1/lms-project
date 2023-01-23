@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh sudo npm install && npm run build
+                sh 'cd webapp && npm install'
+                sh 'cd webapp && npm run build'
             }
         }
         stage('Test') {
